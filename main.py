@@ -1,3 +1,5 @@
+### Hola Mundo ###
+
 # Documentación oficial: https://dastapi.tiangolo.com/es/
 
 # Instala FastApi: pip install "fastapi[all]"
@@ -22,7 +24,6 @@ async def url():
 
 # Inicia el server: unicorn main:app --reload
 # Detener el server: CTRL+C
-
 
 # Documentación con Swagger http://127.0.0.1:8000/docs
 # Documentación con Redocly http://127.0.0.1:8000/redocs
