@@ -6,12 +6,14 @@
 
 from fastapi import FastAPI
 from routers import products, users
+from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()
 
 # Routers
 app.include_router(products.router)
 app.include_router(users.router)
+app.mount("/statics", StaticFiles(directory="static"), name="static")
 
 
 # Url local: http://127.0.0.1:8000
@@ -28,8 +30,10 @@ async def root():
 async def url():
     return {"url_curso": "https://mouredev.com/python"}
 
-# Inicia el server: unicorn main:app --reload
+# Inicia el server: uvicorn main:app --reload
 # Detener el server: CTRL+C
 
 # Documentación con Swagger http://127.0.0.1:8000/docs
 # Documentación con Redocly http://127.0.0.1:8000/redocs
+
+# cd se entra al archivo FastApi para ejecutar el main
