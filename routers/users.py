@@ -1,5 +1,3 @@
-from operator import index
-
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 
